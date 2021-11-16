@@ -2,6 +2,8 @@ package br.ufrn.imd;
 
 import br.ufrn.imd.dao.UsuarioDAO;
 import br.ufrn.imd.modelo.Empresa;
+import br.ufrn.imd.modelo.OfertaDeVaga;
+import br.ufrn.imd.modelo.Prova;
 import br.ufrn.imd.modelo.Candidato;
 
 public class MainEmploymentNetwork {
@@ -44,6 +46,23 @@ public class MainEmploymentNetwork {
 		System.out.println();
 		System.out.println();
 		udao.listUsuarios();
+		
+		//Apenas alguns testes...
+		OfertaDeVaga vaga = new OfertaDeVaga();
+		vaga.addCandidato(c1);
+		vaga.addCandidato(c2);
+		Prova prova = new Prova();
+		prova.setNome("Calculo 1");
+		prova.setDescricao("Derivadas, integrais e Limites");
+		
+		
+		System.out.println();
+		System.out.println("Prova : " + prova.getNome() + "\n Candidatos: ");
+		for(Candidato c : vaga.getCandidatos()) {
+			System.out.println(c.getNome());
+		}
+		
+		
 	}
 
 }
