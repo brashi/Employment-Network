@@ -6,11 +6,12 @@ public class OfertaDeVaga {
 	protected String nome;
 	protected String descricao;
 	protected Empresa empresa;
-	protected ArrayList<String> listaDeDocumentos;
 	
+	protected ArrayList<String> listaDeDocumentos;
 	protected ArrayList<Prova> listaDeProvas;
 	protected ArrayList<Candidato> candidatos;
-	protected enum status {
+	
+	public enum status {
 		InscricoesAbertas,
 		InscricoesFechadas,
 		Finalizada;
@@ -48,6 +49,13 @@ public class OfertaDeVaga {
 	public void listarCandidatos() {
 	}
 	
+	
+	/**
+	 * @return lista de provas
+	 */
+	public ArrayList<Prova> getProvas() {
+		return listaDeProvas;
+	}
 	
 	/**
 	 * @param adicionar uma prova ao array
@@ -142,12 +150,6 @@ public class OfertaDeVaga {
 	public void setEstado(status estado) {
 		this.estado = estado;
 	}
-	
-	
-	
-	
-	
-
 	
 	
 }

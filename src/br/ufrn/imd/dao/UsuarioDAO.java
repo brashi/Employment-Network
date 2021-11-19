@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 import br.ufrn.imd.modelo.Usuario;
 import br.ufrn.imd.modelo.Empresa;
+import br.ufrn.imd.modelo.OfertaDeVaga;
+import br.ufrn.imd.modelo.Prova;
 import br.ufrn.imd.modelo.Candidato;
 
 public class UsuarioDAO {
@@ -65,5 +67,42 @@ public class UsuarioDAO {
 			System.out.println("Foto...: " + usuario.getFoto());
 		}
 	}
+	
+	/*
+	 * Métodos relacionados a vagas e provas.
+	 */
+	public void addVaga(Empresa empresa, OfertaDeVaga vaga) {
+		empresa.getVagas().add(vaga);
+	}
+	
+	public void remVaga(Empresa empresa, OfertaDeVaga vaga) {
+		empresa.getVagas().remove(vaga);
+	}
+	
+	public void listVagas() {
+		for(Usuario usuario : usuarios) {
+			if(usuario.getId() == 1) {
+				for(OfertaDeVaga vaga : ((Empresa) usuario).getVagas()) {
+					System.out.println("********************************************************");
+					System.out.println("Vaga......: " + vaga.getNome());
+					System.out.println("Descrição.: " + vaga.getDescricao());
+					System.out.println("Empresa...: " + vaga.getEmpresa().getNome());
+					System.out.println(vaga.getEstado());
+					System.out.println("Candidatos: ");
+					for(Candidato candidato : vaga.getCandidatos()) {
+						System.out.println(" ---- " + candidato.getNome());
+					}
+					System.out.println("Provas: ");
+					for(Prova prova : vaga.getProvas()) {
+						System.out.println("Prova....: " + prova.getNome());
+						System.out.println("Descrição: " + prova.getDescricao());
+					}
+					
+				}
+				
+			}
+		}
+	}
+	
 
 }

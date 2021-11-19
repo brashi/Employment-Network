@@ -3,6 +3,7 @@ package br.ufrn.imd;
 import br.ufrn.imd.dao.UsuarioDAO;
 import br.ufrn.imd.modelo.Empresa;
 import br.ufrn.imd.modelo.OfertaDeVaga;
+import br.ufrn.imd.modelo.OfertaDeVaga.status;
 import br.ufrn.imd.modelo.Prova;
 import br.ufrn.imd.modelo.Candidato;
 
@@ -41,26 +42,34 @@ public class MainEmploymentNetwork {
 		
 		udao.listUsuarios();
 		
-		udao.updUsuario(c2, "brashi", "222bbb", "Lauro", "lauroX@gmail.com", "Horrivel", "111.222.333-44");
+		udao.updUsuario(c2, "brashi", "222bbb", "Lauro Bezerra", "lauroX@gmail.com", "Horrivel", "111.222.333-44");
 		
 		System.out.println();
 		System.out.println();
 		udao.listUsuarios();
 		
-		//Apenas alguns testes...
+		//Testando.
 		OfertaDeVaga vaga = new OfertaDeVaga();
 		vaga.addCandidato(c1);
 		vaga.addCandidato(c2);
-		Prova prova = new Prova();
-		prova.setNome("Calculo 1");
-		prova.setDescricao("Derivadas, integrais e Limites");
+		vaga.setNome("Programador Full Stack");
+		vaga.setDescricao("Desenvolver front e back");
+		Prova prova1 = new Prova();
+		Prova prova2 = new Prova();
+		prova1.setNome("Linguagem de programação");
+		prova1.setDescricao("C++, Classes, OOP");
+		vaga.addProva(prova1);
+		prova2.setNome("Estrutura de Dados");
+		prova2.setDescricao("Filas, Pilhas, Arvores");
+		vaga.addProva(prova2);
+		status estado = status.InscricoesAbertas;
 		
+		vaga.setEstado(estado);
+		vaga.setEmpresa(e2);
+		udao.addVaga(e2, vaga);
 		
 		System.out.println();
-		System.out.println("Prova : " + prova.getNome() + "\n Candidatos: ");
-		for(Candidato c : vaga.getCandidatos()) {
-			System.out.println(c.getNome());
-		}
+		udao.listVagas();
 		
 		
 	}
