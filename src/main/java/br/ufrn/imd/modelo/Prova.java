@@ -1,4 +1,4 @@
-package main.java.br.ufrn.imd.modelo;
+package br.ufrn.imd.modelo;
 
 public class Prova {
 	protected String descricao;

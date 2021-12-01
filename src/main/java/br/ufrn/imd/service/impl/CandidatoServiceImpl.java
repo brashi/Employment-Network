@@ -1,12 +1,12 @@
-package main.java.br.ufrn.imd.service.impl;
+package br.ufrn.imd.service.impl;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import main.java.br.ufrn.imd.modelo.Candidato;
-import main.java.br.ufrn.imd.repository.CandidatoRepository;
-import main.java.br.ufrn.imd.service.CandidatoService;
+import br.ufrn.imd.modelo.Candidato;
+import br.ufrn.imd.repository.CandidatoRepository;
+import br.ufrn.imd.service.CandidatoService;
 
 @Service
 public class CandidatoServiceImpl implements CandidatoService {

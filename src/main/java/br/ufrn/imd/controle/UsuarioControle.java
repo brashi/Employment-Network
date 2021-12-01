@@ -1,4 +1,4 @@
-package main.java.br.ufrn.imd.controle;
+package br.ufrn.imd.controle;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -7,9 +7,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import main.java.br.ufrn.imd.modelo.Candidato;
-import main.java.br.ufrn.imd.service.CandidatoService;
-import main.java.br.ufrn.imd.dao.UsuarioDAO;
+import br.ufrn.imd.modelo.Candidato;
+import br.ufrn.imd.service.CandidatoService;
 
 @Controller
 public class UsuarioControle {

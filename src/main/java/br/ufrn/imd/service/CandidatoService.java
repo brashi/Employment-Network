@@ -1,8 +1,8 @@
-package main.java.br.ufrn.imd.service;
+package br.ufrn.imd.service;
 
 import java.util.List;
 
-import main.java.br.ufrn.imd.modelo.Candidato;
+import br.ufrn.imd.modelo.Candidato;
 
 public interface CandidatoService {
 	List<Candidato> getAllCandidatos();

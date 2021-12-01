@@ -1,12 +1,12 @@
-package main.java.br.ufrn.imd.dao;
+package br.ufrn.imd.dao;
 
 import java.util.ArrayList;
 
-import main.java.br.ufrn.imd.modelo.Candidato;
-import main.java.br.ufrn.imd.modelo.Empresa;
-import main.java.br.ufrn.imd.modelo.OfertaDeVaga;
-import main.java.br.ufrn.imd.modelo.Prova;
-import main.java.br.ufrn.imd.modelo.Usuario;
+import br.ufrn.imd.modelo.Candidato;
+import br.ufrn.imd.modelo.Empresa;
+import br.ufrn.imd.modelo.OfertaDeVaga;
+import br.ufrn.imd.modelo.Prova;
+import br.ufrn.imd.modelo.Usuario;
 
 public class UsuarioDAO {
 	public ArrayList<Usuario> usuarios;

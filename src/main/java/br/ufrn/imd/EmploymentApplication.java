@@ -1,4 +1,4 @@
-package main.java.br.ufrn.imd;
+package br.ufrn.imd;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,7 +6,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import main.java.br.ufrn.imd.repository.CandidatoRepository;
+import br.ufrn.imd.repository.CandidatoRepository;
 
 @SpringBootApplication
 public class EmploymentApplication implements CommandLineRunner {
